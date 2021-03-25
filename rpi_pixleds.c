@@ -173,8 +173,8 @@ int main(int argc, char *argv[])
         usleep(10);
 #else
     setup_smi_dma(&vc_mem, TX_BUFF_LEN(chan_ledcount));
-    printf("%s %u LED%s per channel, %u channels\n", testmode ? "Testing" : "Setting",
-           chan_ledcount, chan_ledcount==1 ? "" : "s", LED_NCHANS);
+    //printf("%s %u LED%s per channel, %u channels\n", testmode ? "Testing" : "Setting",
+    //       chan_ledcount, chan_ledcount==1 ? "" : "s", LED_NCHANS);
     if (testmode)
     {
         while (1)
@@ -298,7 +298,7 @@ void terminate(int sig)
 {
     int i;
 
-    printf("Closing\n");
+    //printf("Closing\n");
     if (gpio_regs.virt)
     {
         for (i=0; i<LED_NCHANS; i++)
