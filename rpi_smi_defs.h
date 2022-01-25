@@ -3,6 +3,8 @@
 // v0.01 JPB 12/7/20 Adapted from rpi_smi_test v0.19
 
 // Register definitions
+#define PI_23_REG_BASE 0x3F000000
+#define PHYS_REG_BASE PI_23_REG_BASE
 #define SMI_BASE    (PHYS_REG_BASE + 0x600000)
 #define SMI_CS      0x00    // Control & status
 #define SMI_L       0x04    // Transfer length
